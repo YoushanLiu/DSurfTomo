@@ -2464,8 +2464,9 @@ subroutine refineGrid2LayerMdl(minthk0,mmax,dep,vp,vs,rho,&
     real gaussian
     external gaussian
     integer ii,jj,kk,nn,istep
-    gdx=5
-    gdz=5
+    
+    gdx=8
+    gdz=8
     asgr=1
     sgdl=8
     sgs=8
