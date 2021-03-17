@@ -1032,8 +1032,10 @@ subroutine CalSurfG(nx,ny,nz,nparpi,vels,iw,rw,col,dsurf, &
   gdx=8
   gdz=8
   asgr=1
-  sgdl=8
-  sgs=8
+  !sgdl=8
+  !sgs=8
+  sgs = max(gdx, gdz)
+  sgdl = sgs
   earth=6371.0
   fom=1
   snb=0.5
@@ -2464,11 +2466,14 @@ subroutine refineGrid2LayerMdl(minthk0,mmax,dep,vp,vs,rho,&
     real gaussian
     external gaussian
     integer ii,jj,kk,nn,istep
-    gdx=5
-    gdz=5
+    
+    gdx=8
+    gdz=8
     asgr=1
-    sgdl=8
-    sgs=8
+    !sgdl=8
+    !sgs=8
+    sgs = max(gdx, gdz)
+    sgdl = sgs
     earth=6371.0
     fom=1
     snb=0.5
